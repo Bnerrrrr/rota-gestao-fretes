@@ -1,0 +1,77 @@
+/* Cores do projeto, definidas em um só lugar.
+   Para mudar uma cor no site inteiro, basta mudar aqui. */
+:root {
+    --cor-menu: #12303b;        /* fundo do menu lateral */
+    --cor-menu-ativo: #24505a;  /* item selecionado do menu */
+    --cor-fundo: #f1f5f4;       /* fundo das telas */
+    --cor-destaque: #0f7a6a;    /* verde dos links e botões */
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+/* O layout é uma linha: menu lateral à esquerda, conteúdo à direita */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ----- Menu lateral ----- */
+.menu-lateral {
+    width: 232px;
+    background-color: var(--cor-menu);
+    color: #ffffff;
+    padding: 24px 20px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.logo small {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.item-menu {
+    display: block;
+    padding: 12px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    color: #c5d3d8;
+    text-decoration: none;
+}
+
+.item-menu:hover,
+.item-menu.ativo {
+    background-color: var(--cor-menu-ativo);
+    color: #ffffff;
+}
+
+.item-menu .numero {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    margin-right: 8px;
+}
+
+/* ----- Área de conteúdo ----- */
+.conteudo {
+    flex: 1;            /* ocupa todo o espaço que sobrou */
+    padding: 32px 40px;
+}
+
+/* No celular, o menu vai para cima do conteúdo */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+    .menu-lateral {
+        width: 100%;
+    }
+}
