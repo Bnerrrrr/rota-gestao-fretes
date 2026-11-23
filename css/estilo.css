@@ -75,3 +75,41 @@ body {
         width: 100%;
     }
 }
+/* ----- Atalhos da tela inicial (cartões clicáveis) ----- */
+.atalho {
+    display: block;
+    height: 100%;                  /* todos os cartões com a mesma altura */
+    background-color: #ffffff;
+    border: 1px solid #dfe7e5;
+    border-radius: 12px;
+    padding: 16px;
+    text-decoration: none;
+    transition: all 0.2s;          /* deixa a mudança do hover suave */
+}
+
+.atalho .titulo {
+    display: block;
+    color: var(--cor-destaque);
+    font-weight: 600;
+}
+
+.atalho small {
+    color: #6c7a7f;
+}
+
+/* Quando o mouse passa por cima: sobe um pouquinho e ganha sombra */
+.atalho:hover {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* ----- Botão verde do sistema (troca o verde padrão do Bootstrap) ----- */
+.btn-success {
+    --bs-btn-bg: var(--cor-destaque);
+    --bs-btn-border-color: var(--cor-destaque);
+    --bs-btn-hover-bg: #0c6356;
+    --bs-btn-hover-border-color: #0c6356;
+    --bs-btn-active-bg: #0a5448;
+    --bs-btn-active-border-color: #0a5448;
+}
